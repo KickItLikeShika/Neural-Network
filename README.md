@@ -1,4 +1,4 @@
-# Gradient Descent
+# Neural Network
 
 This repositry contains the python implementation of Nerual Network using Froward propagation and back propagation.
 
