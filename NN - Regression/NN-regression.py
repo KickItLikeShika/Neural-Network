@@ -7,11 +7,11 @@ def train(X, y, W1, W2):
     Z2 = np.dot(X, W1) # dot product of X (input) and first set of 3x2 weights
     A2 = sigmoid(Z2) # activation function
     Z3 = np.dot(A2, W2) # dot product of hidden layer (z2) and second set of 3x1 weights
-    o = sigmoid(Z3) # final activation function
+    A3 = sigmoid(Z3) # final activation function
 
     # backward propagate through the network
-    o_error = y - o # error in output
-    o_delta = o_error*sigmoid_gradient(o) # applying derivative of sigmoid to error
+    o_error = y - A3 # error in output
+    o_delta = o_error*sigmoid_gradient(A3) # applying derivative of sigmoid to error
 
 
     z2_error = o_delta.dot(W2.T) # z2 error: how much our hidden layer weights contributed to output error
@@ -21,7 +21,7 @@ def train(X, y, W1, W2):
     W1 += X.T.dot(z2_delta) # adjusting first set (input --> hidden) weights
     W2 += A2.T.dot(o_delta) # adjusting second set (hidden --> output) weights
 
-    return o
+    return A3
 
 
 def sigmoid(z):
