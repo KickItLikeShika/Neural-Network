@@ -40,23 +40,10 @@ def training(X, y, theta1, theta2):
 
 
 
-# def lossFunction(X, y, theta):
-#     summation = 0
-#     m = y.size
-
-#     for i in range(m):
-#         suqred_error = (trained([i]) - y) ** 2
-#         summation += suqred_error
-    
-#     return summation
-
-
 def sigmoid_gradient(z):
     """Get the G prime."""
-    # Initialize the g zeros to save the results correctly
-    g = np.zeros(z.shape)
-    g = sigmoid(z) * (1 - sigmoid(z))
-    return g
+    #derivative of sigmoid
+    return z * (1 - z)
 
 
 def sigmoid(z):
