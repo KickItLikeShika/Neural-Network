@@ -4,16 +4,6 @@ This repositry contains the python implementation of Nerual Network using Frowar
 
 Applied the neural network on two different problems (Regression problem, Classification problem)
 
-# Hints
-
-θ or W(Weights) or parameters: The parameters for the hypothesis function or some people call them the weights.
-
-m: The number of rows in your data.
-
-n: The number of features(columns) in your data.
-
-x(i)(j) : X super i, sub j.
-
 
 ## Requirements 
 
