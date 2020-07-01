@@ -1,7 +1,6 @@
 import numpy as np
 
 
-
 def training(X, y, theta1, theta2):
     """Perform Forward propagation and backpropagation."""
 
