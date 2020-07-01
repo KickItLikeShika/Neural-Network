@@ -3,14 +3,23 @@ import numpy as np
 
 def train(X, y, W1, W2):
     """Perform Forward propagation and backpropagation."""
-    #forward propagation through our network
-    Z2 = np.dot(X, W1) # dot product of X (input) and first set of 3x2 weights
-    A2 = sigmoid(Z2) # activation function
-    Z3 = np.dot(A2, W2) # dot product of hidden layer (z2) and second set of 3x1 weights
-    A3 = sigmoid(Z3) # final activation function
+    
+    # Forward propagation
+    
+    # Dot product of X (input) and first set of 3x2 weights
+    Z2 = np.dot(X, W1)
+    # activation function
+    A2 = sigmoid(Z2) 
+    # dot product of hidden layer (Z2) and second set of 3x1 weights
+    Z3 = np.dot(A2, W2) 
+    # final activation function
+    A3 = sigmoid(Z3) 
 
-    # backward propagate through the network
-    o_error = y - A3 # error in output
+    
+    # Back propagation
+    
+    # error in output
+    o_error = y - A3 
     o_delta = o_error*sigmoid_gradient(A3) # applying derivative of sigmoid to error
 
 
