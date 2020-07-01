@@ -20,15 +20,20 @@ def train(X, y, W1, W2):
     
     # error in output
     o_error = y - A3 
-    o_delta = o_error*sigmoid_gradient(A3) # applying derivative of sigmoid to error
+    # applying derivative of sigmoid to error
+    o_delta = o_error*sigmoid_gradient(A3) 
 
 
-    z2_error = o_delta.dot(W2.T) # z2 error: how much our hidden layer weights contributed to output error
-    z2_delta = z2_error*sigmoid_gradient(A2) # applying derivative of sigmoid to z2 error
+    # z2 error: how much our hidden layer weights contributed to output error
+    z2_error = o_delta.dot(W2.T) 
+    # applying derivative of sigmoid to z2 error
+    z2_delta = z2_error*sigmoid_gradient(A2) 
 
 
-    W1 += X.T.dot(z2_delta) # adjusting first set (input --> hidden) weights
-    W2 += A2.T.dot(o_delta) # adjusting second set (hidden --> output) weights
+    # adjusting first set (input --> hidden) weights
+    W1 += X.T.dot(z2_delta) 
+    # adjusting second set (hidden --> output) weights
+    W2 += A2.T.dot(o_delta) 
 
     return A3
 
