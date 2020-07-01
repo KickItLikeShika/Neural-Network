@@ -30,9 +30,8 @@ def train(X, y, W1, W2):
     z2_delta = z2_error*sigmoid_gradient(A2) 
 
 
-    # adjusting first set (input --> hidden) weights
+    # Update the weights
     W1 += X.T.dot(z2_delta) 
-    # adjusting second set (hidden --> output) weights
     W2 += A2.T.dot(o_delta) 
 
     return A3
