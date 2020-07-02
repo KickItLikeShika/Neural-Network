@@ -57,7 +57,8 @@ def predict(xPredicted, X, y, W1, W2):
 
 def main():
 
-    # X = (hours studying, hours sleeping), y = score on test, xPredicted = 4 hours studying & 8 hours sleeping (input data for prediction)
+    # The Data
+    # The features
     X = np.array(([2, 9], [1, 5], [3, 6]), dtype=float)
     y = np.array(([92], [86], [89]), dtype=float)
     xPredicted = np.array(([4,8]), dtype=float)
