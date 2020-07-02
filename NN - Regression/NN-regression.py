@@ -60,7 +60,9 @@ def main():
     # The Data
     # The features
     X = np.array(([2, 9], [1, 5], [3, 6]), dtype=float)
+    # The Traget    
     y = np.array(([92], [86], [89]), dtype=float)
+    # What we wanna predict
     xPredicted = np.array(([4,8]), dtype=float)
 
 
@@ -74,16 +76,20 @@ def main():
     hiddenSize = 3
 
 
-    #weights
-    W1 = np.random.randn(inputSize, hiddenSize) # (2x3) weight matrix from input to hidden layer
+    # Weights
+    
+    # (2x3) weight matrix from input to hidden layer
+    W1 = np.random.randn(inputSize, hiddenSize) 
     #    print(self.W1)
-    W2 = np.random.randn(hiddenSize, outputSize) # (3x1) weight matrix from hidden to output layer
+    # (3x1) weight matrix from hidden to output layer
+    W2 = np.random.randn(hiddenSize, outputSize) 
     #    print(self.W2)
 
 
 
     #print(xPredicted)
-    xPredicted = xPredicted/np.amax(xPredicted, axis=0) # maximum of xPredicted (our input data for the prediction)
+    # maximum of xPredicted (our input data for the prediction)
+    xPredicted = xPredicted/np.amax(xPredicted, axis=0) 
     #print(xPredicted)
     y = y/100 # max test score is 100
     for i in range(3000): # trains the NN 1,000 times
