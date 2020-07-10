@@ -1,6 +1,6 @@
 # Neural Network
 
-This repositry contains the python implementation of Nerual Network using Froward propagation and back propagation.
+This repository contains the python implementation of Nerual Network using Froward propagation and back propagation.
 
 Applied the neural network on two different problems (Regression problem, Classification problem)
 
