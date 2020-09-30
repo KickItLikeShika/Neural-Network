@@ -67,9 +67,7 @@ def main():
 
 
     # scale units
-    #print(X)
     X = X/np.amax(X, axis=0) # maximum of X array
-    #print(X)
     #parameters
     inputSize = 2
     outputSize = 1
