@@ -59,9 +59,13 @@ def main():
 
     # The Data
     # The features
-    X = np.array(([2, 9], [1, 5], [3, 6]), dtype=float)
+    X = np.array(([2, 9], 
+                  [1, 5], 
+                  [3, 6]), dtype=float)
     # The Traget    
-    y = np.array(([92], [86], [89]), dtype=float)
+    y = np.array(([92], 
+                  [86], 
+                  [89]), dtype=float)
     # What we wanna predict
     xPredicted = np.array(([4,8]), dtype=float)
 
