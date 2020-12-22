@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np 
 
 
 def training(X, y, theta1, theta2):
